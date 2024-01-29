@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keep It All</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="util.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img class="invert" src="./img/hamburger.svg" alt="" />
+        <img
+          class="logo-img"
+          src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
+          alt=""
+        />
+        <h2 class="invert">Keep It All</h2>
+      </div>
+      <div class="search">
+        <img class="invert" src="./img/search.svg" alt="" />
+        <input type="text" placeholder="Search" class="input" />
+      </div>
+    </div>
+
+    <div class="container flex">
+      <div class="left">
+        <div class="left-container">
+          <div class="notes box flex flex-wrap align-center">
+            <img class="invert" src="./img/notes.svg" alt="" />
+            <p>Notes</p>
+          </div>
+          <div class="to-do box flex flex-wrap align-center">
+            <img class="invert" src="./img/to-do.svg" alt="" />
+            <p>To-Do</p>
+          </div>
+          <div class="to-do box flex flex-wrap align-center">
+            <img class="invert" src="./img/reminder.svg" alt="" />
+            <p>Reminders</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right flex justify-center">
+        <div id="right-container">
+          <div class="add-note add-box">
+            <img src="/img/plus.svg" alt="" />
+            <p>Add to the list</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
