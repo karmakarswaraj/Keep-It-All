@@ -23,6 +23,7 @@ function createNoteElement(id, content) {
   element.value = content;
   element.placeholder = "What To-Do?";
 
+  element.style.fontSize = "20px";
   element.addEventListener("change", () => {
     updateNote(id, element.value);
   });

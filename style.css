@@ -128,7 +128,12 @@ img {
 }
 .add-box p {
   color: #000000;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: large;
   margin-top: 20px;
 }
+a{
+  text-decoration: none;
+}
+
