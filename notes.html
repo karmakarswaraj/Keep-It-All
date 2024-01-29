@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keep It All</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- <link rel="stylesheet" href="utils.css" /> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="top flex flex-wrap justify-center">
+      <div class="type">Take a note...</div>
+
+      <div class="typeContainer scroll-content ">
+        <div class="add-note m2">
+          <textarea placeholder="Title" id="" cols="30" rows="2" oninput="resizeTextarea(this)"></textarea>
+          <textarea class="note" id="note" placeholder="Take a note..." cols="30" rows="2"
+            oninput="resizeTextarea(this)"></textarea>
+        </div>
+        <div class="typeButton m1 flex flex-wrap">
+          <button class="button-32 save">Save</button>
+          <button class="button-32">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="notesContainer flex flex-wrap">
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        <div class="notes">
+          <h5>Title</h5>
+          <p>Description</p>
+          <button>delete</button>
+          <button>Edit</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
