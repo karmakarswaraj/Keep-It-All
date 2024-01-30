@@ -134,16 +134,15 @@ textarea:focus {
 }
 .btn {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.8s ease;
 }
 .notes:hover {
   background: rgb(32 33 36);
-  /* transform: scale(1.1); */
+  transform: scale(1.03);
 }
-/* .notes:hover .btn{
-    display: block;
-} */
-
 .notebtn {
   width: 33%;
+}
+.notebtn img {
+  filter: invert(1);
 }

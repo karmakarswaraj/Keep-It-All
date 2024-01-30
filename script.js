@@ -11,7 +11,6 @@ type.addEventListener("click", () => {
 });
 
 document.body.addEventListener("click", (event) => {
-  // Check if the click is outside the specified elements
   if (
     !type.contains(event.target) &&
     !typeSpace.contains(event.target) &&
@@ -20,11 +19,11 @@ document.body.addEventListener("click", (event) => {
     typeSpace.style.display = "none";
     type.style.display = "block";
     isOpen = false;
+    //saveNotes();
   }
 });
 
 function resizeTextarea(textarea) {
-  // Set the height to the scroll height to allow for growing
   textarea.style.height = "auto";
   textarea.style.height = textarea.scrollHeight + "px";
 }
@@ -42,3 +41,44 @@ document.querySelectorAll(".notes").forEach((notesContainer) => {
     isOver = false;
   });
 });
+
+// C R U D
+//Create Read Update Delete  + Search Sort Filter
+
+function showAllNotes() {
+  let allNotes;
+  let notes = localStorage.getItem("notes");
+  if (notes === null) {
+    allNotes = [];
+  } else {
+    allNotes = JSON.parse(notes);
+  }
+
+  let notesContainer = document.querySelector(".notesContainer");
+  notesContainer.innerHTML = "";
+  allNotes.forEach((note) => {
+    notesContainer.innerHTML += `<div class="notes">
+                                        <h5>Title</h5>
+                                        <p>Description</p>
+                                        <div class="btn">
+                                            <button class="button-32 notebtn"><img src="./img/delete.svg" alt=""></button>
+                                            <button class="button-32 notebtn"><img src="./img/edit.svg" alt=""></button>
+                                        </div>
+                                        </div>`;
+  });
+}
+
+function saveAllNotes() {
+
+}
+function updateNotes() {
+    
+}
+
+function deleteNotes() {
+    
+}
+// showAllNotes();
+
+
+//if title or description is !empty && close is clicked || body is clicked ---> save
