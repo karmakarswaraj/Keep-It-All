@@ -39,18 +39,21 @@ function createNoteElement(id, content) {
 }
 
 function addNoteElement() {
-  const note = getNotes();
+  const notes = getNotes();
   const noteObject = {
     id: Math.floor(Math.random() * 1000),
     content: "",
   };
 
   const noteElement = createNoteElement(noteObject.id, noteObject.content);
-  noteContainer.appendChild(noteElement, addNote);
 
-  note.push(noteObject);
-  setNotes(note);
+  // Append the new note before the addNote button
+  noteContainer.insertBefore(noteElement, addNote);
+
+  notes.push(noteObject);
+  setNotes(notes);
 }
+
 
 function deleteNote(id, element) {
   const notes = getNotes().filter((note) => note.id != id);
@@ -60,8 +63,26 @@ function deleteNote(id, element) {
 }
 
 function updateNote(id, element) {
-  const target = getNotes().filter((note) => note.id == id)[0];
+  const target = getNotes().find((note) => note.id === id);
 
-  target.content = element;
-  setNotes(notes);
+  if (target) {
+    target.content = element.value; // Use element.value to get the updated content
+    setNotes(getNotes()); // Save the updated notes to localStorage
+  }
 }
+
+
+let search = document.querySelector(".search");
+search.addEventListener("keyup", (e) => {
+  let value = e.target.value.toLowerCase();
+  let notes = document.querySelectorAll(".note");
+  
+  Array.from(notes).forEach((note) => {
+    let title = note.querySelector("textarea").value;
+    if(title.toLowerCase().includes(value)) {
+      note.style.display = "block";
+    } else {
+      note.style.display = "none";
+    }
+  })
+})

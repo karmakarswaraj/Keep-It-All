@@ -103,8 +103,6 @@ closeBtn.addEventListener("click", () => {
   type.style.display = "block";
 });
 
-function updateNotes(index) {}
-
 function deleteNotes(index) {
   let allNotes = JSON.parse(localStorage.getItem("notes")) || [];
     //Alert
@@ -114,4 +112,8 @@ function deleteNotes(index) {
       localStorage.setItem("notes", JSON.stringify(allNotes));
       showAllNotes();
     }
+}
+
+function updateNotes(index) {
+  
 }
